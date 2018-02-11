@@ -4,11 +4,18 @@ body {
   font-family: sans-serif;
   background: #262626; }
 
-a#slideBtn {
+div#centerWrapper {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+a#slideBtn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   text-decoration: none;
   letter-spacing: 4px;
   display: block;
@@ -16,7 +23,8 @@ a#slideBtn {
   border: 2px solid #fff;
   box-sizing: border-box;
   border-radius: 25px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 5px; }
   a#slideBtn span {
     position: relative;
     display: inline-block;
@@ -30,7 +38,7 @@ a#slideBtn {
     bottom: 0;
     left: 0;
     background: #fff;
-    transition: 0.5s; }
+    transition: 0.2s ease-in-out; }
   a#slideBtn:hover::before {
     height: 100%; }
   a#slideBtn:hover span {
@@ -46,6 +54,48 @@ a#slideBtn {
       left: 0;
       padding: 10px 20px;
       box-sizing: border-box; }
+
+a#spinBtn {
+  position: relative;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 5px;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  transition: 0.4s; }
+  a#spinBtn span:before, a#spinBtn span:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    transition: 0.3s; }
+  a#spinBtn span:before {
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(45deg);
+    top: 3px;
+    left: -8px; }
+  a#spinBtn span:after {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    top: 3px;
+    right: -8px; }
+  a#spinBtn:hover {
+    border-radius: 30px; }
+    a#spinBtn:hover span:before {
+      left: -25px;
+      transform: rotate(-135deg); }
+    a#spinBtn:hover span:after {
+      right: -25px;
+      transform: rotate(-135deg); }
 
 ul#tabs {
   position: absolute;
