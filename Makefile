@@ -1,2 +1,2 @@
 watch:
-	sass --watch styles.scss:styles.css
+	sass --watch ./assets/styles/styles.scss:./assets/styles/styles.css

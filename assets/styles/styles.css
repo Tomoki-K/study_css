@@ -1,6 +1,6 @@
 @font-face {
   font-family: "HeadingPro";
-  src: url("./assets/fonts/HeadingPro-Regular.otf") format("opentype"); }
+  src: url("../fonts/HeadingPro-Regular.otf") format("opentype"); }
 body {
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ div.section {
     div.section#b1 h1 {
       color: #fff; }
   div.section#b2 {
-    background-image: url("./assets/img/skytree.jpg"); }
+    background-image: url("../imgs/skytree.jpg"); }
     div.section#b2 h1 {
       color: #fff; }
   div.section#b3 {

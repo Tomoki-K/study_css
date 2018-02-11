@@ -1,6 +1,6 @@
-@import './assets/mixin/fonts';
+@import '../mixin/fonts';
 
-@include font-face('HeadingPro', './assets/fonts/HeadingPro-Regular', null, null, otf);
+@include font-face('HeadingPro', '../fonts/HeadingPro-Regular', null, null, otf);
 
 $dark-gray: #1B1D26;
 $dark-green: #425955;
@@ -42,7 +42,7 @@ div.section {
     }
   }
   &#b2 {
-    background-image: url('./assets/img/skytree.jpg');
+    background-image: url('../imgs/skytree.jpg');
     h1{
       color: $white;
     }
