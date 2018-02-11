@@ -19,15 +19,15 @@ div.section {
     margin: 0;
     vertical-align: middle;
     text-transform: uppercase; }
-  div.section#b1 {
+  div.section#sec1 {
     background-color: #1B1D26; }
-    div.section#b1 h1 {
+    div.section#sec1 h1 {
       color: #fff; }
-  div.section#b2 {
+  div.section#sec2 {
     background-image: url("../imgs/skytree.jpg"); }
-    div.section#b2 h1 {
+    div.section#sec2 h1 {
       color: #fff; }
-  div.section#b3 {
+  div.section#sec3 {
     background-color: #425955; }
 
 ul#tabs {
@@ -40,11 +40,12 @@ ul#tabs {
   padding: 0; }
   ul#tabs li {
     flex: 1;
+    margin: 0 20px;
     list-style: none;
     text-align: center; }
     ul#tabs li a {
+      display: block;
       position: relative;
-      width: 200px;
       padding: 10px 0;
       transition: 0.3s;
       text-decoration: none;
