@@ -323,6 +323,68 @@ a#spinBtn {
   }
 }
 
+a#fadeBtn {
+  position: relative;
+
+  display: block;
+
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 10px 20px;
+
+  transition: 0.4s;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: $white;
+  border: 2px solid $white;
+  span {
+    &::before, &::after {
+      position: absolute;
+
+      display: block;
+
+      width: 30px;
+      height: 30px;
+
+      content: '';
+      transition: 0.3s;
+    }
+    &::before {
+      top: 3px;
+      left: -8px;
+
+      transform: rotate(45deg);
+
+    }
+    &::after {
+      top: 3px;
+      right: -8px;
+
+      transform: rotate(45deg);
+    }
+  }
+  &:hover {
+    border-radius: 30px;
+    span {
+      &::before {
+        left: -25px;
+
+        border-top: 2px solid $white;
+        border-right: 2px solid $white;
+      }
+      &::after {
+        right: -25px;
+
+        border-bottom: 2px solid $white;
+        border-left: 2px solid $white;
+
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 520px) {
   ul#tabs {
     display: none;

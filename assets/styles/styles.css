@@ -199,6 +199,44 @@ a#spinBtn {
       right: -25px;
       transform: rotate(-135deg); }
 
+a#fadeBtn {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 10px 20px;
+  transition: 0.4s;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 2px solid #fff; }
+  a#fadeBtn span::before, a#fadeBtn span::after {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    content: '';
+    transition: 0.3s; }
+  a#fadeBtn span::before {
+    top: 3px;
+    left: -8px;
+    transform: rotate(45deg); }
+  a#fadeBtn span::after {
+    top: 3px;
+    right: -8px;
+    transform: rotate(45deg); }
+  a#fadeBtn:hover {
+    border-radius: 30px; }
+    a#fadeBtn:hover span::before {
+      left: -25px;
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff; }
+    a#fadeBtn:hover span::after {
+      right: -25px;
+      border-bottom: 2px solid #fff;
+      border-left: 2px solid #fff; }
+
 @media screen and (max-width: 520px) {
   ul#tabs {
     display: none; }
