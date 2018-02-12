@@ -44,8 +44,8 @@ ul#tabs {
     list-style: none;
     text-align: center; }
     ul#tabs li a {
-      display: block;
       position: relative;
+      display: block;
       padding: 10px 0;
       transition: 0.3s;
       text-decoration: none;
@@ -83,17 +83,47 @@ div#centerWrapper {
   top: 50%;
   left: 50%;
   display: flex;
+  align-items: center;
   flex-direction: column;
   transform: translate(-50%, -50%); }
 
+div#hamburger {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  display: none;
+  width: 60px;
+  height: 40px; }
+  div#hamburger span {
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    transition: 0.3s;
+    background-color: #fff; }
+    div#hamburger span:nth-child(2) {
+      transform: translateY(20px); }
+    div#hamburger span:nth-child(3) {
+      transform: translateY(20px); }
+    div#hamburger span:nth-child(4) {
+      transform: translateY(40px); }
+  div#hamburger:hover span:nth-child(1) {
+    transform: translateY(-20px);
+    opacity: 0; }
+  div#hamburger:hover span:nth-child(2) {
+    transform: translateY(20px) rotate(45deg); }
+  div#hamburger:hover span:nth-child(3) {
+    transform: translateY(20px) rotate(-45deg); }
+  div#hamburger:hover span:nth-child(4) {
+    transform: translateY(60px);
+    opacity: 0; }
+
 a#slideBtn {
   position: relative;
-  left: 50%;
   display: block;
   overflow: hidden;
   box-sizing: border-box;
   margin: 5px;
-  transform: translateX(-50%);
   text-decoration: none;
   letter-spacing: 4px;
   color: #fff;
@@ -131,13 +161,11 @@ a#slideBtn {
 
 a#spinBtn {
   position: relative;
-  left: 50%;
   display: block;
   box-sizing: border-box;
   margin: 5px;
   padding: 10px 20px;
   transition: 0.4s;
-  transform: translateX(-50%);
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -170,5 +198,12 @@ a#spinBtn {
     a#spinBtn:hover span::after {
       right: -25px;
       transform: rotate(-135deg); }
+
+@media screen and (max-width: 520px) {
+  ul#tabs {
+    display: none; }
+
+  div#hamburger {
+    display: block; } }
 
 /*# sourceMappingURL=styles.css.map */
