@@ -7,7 +7,7 @@ body {
   font-family: HeadingPro, sans-serif; }
 
 div.section {
-  display: table;
+  display: block;
   width: 100%;
   height: 100vh;
   text-align: center;
@@ -15,8 +15,7 @@ div.section {
   background-position: center;
   background-size: cover; }
   div.section h1 {
-    display: table-cell;
-    margin: 0;
+    margin-bottom: 20px;
     vertical-align: middle;
     text-transform: uppercase; }
   div.section#sec1 {
@@ -29,6 +28,15 @@ div.section {
       color: #fff; }
   div.section#sec3 {
     background-color: #425955; }
+
+div#centerWrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%); }
 
 ul#tabs {
   position: fixed;
@@ -77,15 +85,6 @@ ul#tabs {
       transform: scaleX(1); }
     ul#tabs li:hover::after {
       transform: scaleX(1); }
-
-div#centerWrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  transform: translate(-50%, -50%); }
 
 div#hamburger {
   position: fixed;
@@ -236,6 +235,50 @@ a#fadeBtn {
       right: -25px;
       border-bottom: 2px solid #fff;
       border-left: 2px solid #fff; }
+
+a#squareBtn {
+  position: relative;
+  display: inline-grid;
+  width: 50px;
+  height: 50px;
+  margin: 25px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #fff; }
+  a#squareBtn::before {
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+    left: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    content: '';
+    transition: 0.3s 0.2s; }
+  a#squareBtn::after {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 50px;
+    height: 50px;
+    content: '';
+    transition: 0.3s; }
+  a#squareBtn:hover {
+    color: #1B1D26; }
+    a#squareBtn:hover::before {
+      top: -10px;
+      left: -10px;
+      width: 70px;
+      height: 70px;
+      background-color: #F1F2D8; }
+    a#squareBtn:hover::after {
+      top: -12px;
+      left: -12px;
+      width: 70px;
+      height: 70px;
+      transform: rotate(45deg);
+      border: 2px solid #1B1D26; }
 
 @media screen and (max-width: 520px) {
   ul#tabs {
