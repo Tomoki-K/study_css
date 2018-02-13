@@ -398,6 +398,7 @@ a#squareBtn {
   text-decoration: none;
 
   color: $white;
+  transition: 0.3s 0.2s;
   &::before {
     position: absolute;
     z-index: -1;

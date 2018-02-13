@@ -245,7 +245,8 @@ a#squareBtn {
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+  transition: 0.3s 0.2s; }
   a#squareBtn::before {
     position: absolute;
     z-index: -1;
