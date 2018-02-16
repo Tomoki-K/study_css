@@ -17,7 +17,8 @@ div.section {
   div.section h1 {
     margin-bottom: 20px;
     vertical-align: middle;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 5em; }
   div.section#sec1 {
     background-color: #1B1D26; }
     div.section#sec1 h1 {
@@ -281,6 +282,21 @@ a#squareBtn {
       height: 70px;
       transform: rotate(45deg);
       border: 2px solid #1B1D26; }
+
+h1#fillInText {
+  position: relative;
+  white-space: nowrap; }
+  h1#fillInText::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0%;
+    content: attr(data-text);
+    transition: 0.3s;
+    color: #BFBD9F; }
+  h1#fillInText:hover::before {
+    width: 100%; }
 
 @media screen and (max-width: 520px) {
   ul#tabs {

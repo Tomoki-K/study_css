@@ -32,6 +32,8 @@ div.section {
 
     vertical-align: middle;
     text-transform: uppercase;
+
+    font-size: 5em;
   }
   &#sec1 {
     background-color: $dark-gray;
@@ -446,6 +448,31 @@ a#squareBtn {
       transform: rotate(45deg);
 
       border: 2px solid $dark-gray;
+    }
+  }
+}
+
+h1#fillInText {
+  position: relative;
+
+  white-space: nowrap;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 0%;
+
+    content: attr(data-text);
+    transition: 0.3s;
+
+    color: $beige;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
     }
   }
 }
