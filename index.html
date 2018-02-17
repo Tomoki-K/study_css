@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>css study</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/styles/styles.css">
   </head>
   <body>
 
     <ul id='tabs'>
-      <li><a href="#sec1">Section1</a></li>
-      <li><a href="#sec2">Section2</a></li>
-      <li><a href="#sec3">Section3</a></li>
+      <li><a val=1>Section1</a></li>
+      <li><a val=2>Section2</a></li>
+      <li><a val=3>Section3</a></li>
     </ul>
 
     <div id="hamburger">
@@ -38,8 +40,11 @@
     <div class="section" id="sec2">
       <div id='centerWrapper'>
         <h1>text</h1>
-        <a href="#" id='squareBtn'>Button
-        </a>
+        <div id="horizontalWrapper">
+          <a href="#" class="squareBtn" id='squareBtn1'>Button</a>
+          <a href="#" class="squareBtn" id='squareBtn2'>Button</a>
+          <a href="#" class="squareBtn" id='squareBtn3'>Button</a>
+        </div>
       </div>
     </div>
 

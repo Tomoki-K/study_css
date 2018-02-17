@@ -237,7 +237,7 @@ a#fadeBtn {
       border-bottom: 2px solid #fff;
       border-left: 2px solid #fff; }
 
-a#squareBtn {
+a.squareBtn {
   position: relative;
   display: inline-grid;
   width: 50px;
@@ -249,7 +249,7 @@ a#squareBtn {
   text-decoration: none;
   color: #fff;
   line-height: 50px; }
-  a#squareBtn::before {
+  a.squareBtn::before {
     position: absolute;
     z-index: -1;
     top: 10px;
@@ -259,7 +259,7 @@ a#squareBtn {
     height: 30px;
     content: '';
     transition: 0.3s 0.2s; }
-  a#squareBtn::after {
+  a.squareBtn::after {
     position: absolute;
     top: -2px;
     left: -2px;
@@ -267,15 +267,15 @@ a#squareBtn {
     height: 50px;
     content: '';
     transition: 0.3s; }
-  a#squareBtn:hover {
+  a.squareBtn:hover {
     color: #1B1D26; }
-    a#squareBtn:hover::before {
+    a.squareBtn:hover::before {
       top: -10px;
       left: -10px;
       width: 70px;
       height: 70px;
       background-color: #F1F2D8; }
-    a#squareBtn:hover::after {
+    a.squareBtn:hover::after {
       top: -12px;
       left: -12px;
       width: 70px;
