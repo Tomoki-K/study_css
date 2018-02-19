@@ -3,7 +3,7 @@
 @include font-face('HeadingPro', '../fonts/HeadingPro-Regular', null, null, otf);
 
 $dark-gray: #1B1D26;
-$dark-green: #425955;
+$dark-green: #223330;
 $mid-green: #778C7A;
 $light-beige: #F1F2D8;
 $beige: #BFBD9F;
@@ -33,19 +33,15 @@ div.section {
     vertical-align: middle;
     text-transform: uppercase;
 
+    color: $white;
+
     font-size: 5em;
   }
   &#sec1 {
     background-color: $dark-gray;
-    h1{
-      color: $white;
-    }
   }
   &#sec2 {
     background-image: url('../imgs/skytree.jpg');
-    h1{
-      color: $white;
-    }
   }
   &#sec3 {
     background-color: $dark-green;
