@@ -382,6 +382,54 @@ a#fadeBtn {
   }
 }
 
+a#glareBtn {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  margin: 5px;
+  padding: 10px 15px;
+
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  border: 2px solid $white;
+
+  span {
+    overflow: hidden;
+
+    color: $white;
+
+    font-size: 1em;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 20px;
+      height: 100%;
+
+      content: '';
+      transition: 0.5s;
+      transform: skewX(-15deg);
+      animation: glareAnimation 2s cubic-bezier(0.8, 0, 1, 1) infinite;
+
+      background: $white;
+
+      mix-blend-mode: difference;
+    }
+  }
+  &:hover
+   span::before {
+      width: 100%;
+
+      transform: skewX(0deg);
+      animation: none;
+  }
+}
+
 a.squareBtn {
   position: relative;
 
@@ -477,4 +525,16 @@ h1#fillInText {
 @media screen and (min-device-width: 375px) and (max-device-width: 812px) {
   // for mobile
   @import 'mobile';
+}
+
+
+// ============= Animations ============= //
+
+@keyframes glareAnimation {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: calc(100% + 10px);
+  }
 }
