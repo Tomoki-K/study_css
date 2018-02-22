@@ -11,7 +11,7 @@ div.section {
 
 div#horizontalWrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 ul#tabs {
@@ -39,4 +39,26 @@ ul#tabs {
 }
 div#hamburger {
   display: block;
+}
+
+a.squareBtn {
+  width: 3em;
+  height: 3em;
+
+  border: 0.1em solid $white;
+
+  line-height: 3em;
+  &::before, &::after{
+    width: 3em;
+    height: 3em;
+  }
+  &:hover {
+    &::before, &::after {
+      top: 0.01em;
+      left: 0.01em;
+
+      width: 3em;
+      height: 3em;
+    }
+  }
 }

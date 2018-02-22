@@ -337,7 +337,7 @@ h1#fillInText {
 
   div#horizontalWrapper {
     display: flex;
-    flex-direction: column; }
+    flex-direction: row; }
 
   ul#tabs {
     z-index: 1;
@@ -356,7 +356,21 @@ h1#fillInText {
         line-height: 3em; }
 
   div#hamburger {
-    display: block; } }
+    display: block; }
+
+  a.squareBtn {
+    width: 3em;
+    height: 3em;
+    border: 0.1em solid #fff;
+    line-height: 3em; }
+    a.squareBtn::before, a.squareBtn::after {
+      width: 3em;
+      height: 3em; }
+    a.squareBtn:hover::before, a.squareBtn:hover::after {
+      top: 0.01em;
+      left: 0.01em;
+      width: 3em;
+      height: 3em; } }
 @keyframes glareAnimation {
   0% {
     left: -40%; }
