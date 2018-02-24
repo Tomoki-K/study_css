@@ -22,4 +22,17 @@ $(document).ready(function() {
       $("ul#tabs, div#hamburger").toggleClass("showMode");
     }
   });
+
+  // fade in object on scroll in
+  $(window).scroll(function(){
+    $(".fadein").each(function(i){
+      var obj_bottom = $(this).position().top + $(this).outerHeight();
+      var win_bottom = $(this).scrollTop() + $(this).height();
+      if( win_bottom > obj_bottom ) {
+        setTimeout(() => {
+          $(this).animate({'opacity': '1'}, 500);
+        }, 1000);
+      }
+    });
+  });
 });

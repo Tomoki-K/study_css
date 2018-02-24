@@ -46,6 +46,9 @@ div.section {
   &#sec3 {
     background-color: $dark-green;
   }
+  .fadein {
+    opacity: 0;
+  }
 }
 
 div#centerWrapper {

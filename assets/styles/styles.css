@@ -26,6 +26,8 @@ div.section {
     background-image: url("../imgs/skytree.jpg"); }
   div.section#sec3 {
     background-color: #223330; }
+  div.section .fadein {
+    opacity: 0; }
 
 div#centerWrapper {
   position: relative;
