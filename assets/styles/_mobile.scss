@@ -5,9 +5,7 @@ body {
 }
 
 div.modal {
-  display: none;
   &.showMode {
-    display: block;
     div.modal-window {
       width: 90%;
       height: 50%;
