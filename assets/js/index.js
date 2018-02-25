@@ -36,7 +36,7 @@ $(document).ready(function() {
     });
   });
 
-  $("a#slideBtn, div.modal-wrappper, span.closeBtn").click(function() {
+  $("a#slideBtn, div.modal-wrapper, span.closeBtn").click(function() {
     $("div.modal").toggleClass("showMode");
   });
 });

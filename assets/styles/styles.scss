@@ -52,13 +52,9 @@ div.section {
 }
 
 div.modal {
-  z-index: 100;
-
-  transition: 0.1s;
-
-  opacity: 0;
   div.modal-wrapper {
     position: fixed;
+  z-index: 100;
     top: 0;
     left: 0;
 
@@ -72,7 +68,7 @@ div.modal {
   div.modal-window {
     position: fixed;
     z-index: 100;
-    top: 50%;
+    top: -50%;
     left: 50%;
 
     display: block;
@@ -80,7 +76,7 @@ div.modal {
     width: 500px;
     height: 300px;
 
-    transition: 0.3s;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: translate(-50%, -50%);
 
     border-radius: 1em;
@@ -104,7 +100,9 @@ div.modal {
   }
 
   &.showMode {
-    opacity: 1;
+    div.modal-window{
+      top: 50%;
+    }
     div.modal-wrapper {
       display: block;
     }
