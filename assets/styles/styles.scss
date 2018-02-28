@@ -2,7 +2,8 @@
 
 @include font-face('HeadingPro', '../fonts/HeadingPro-Regular', null, null, otf);
 
-$dark-gray: #1B1D26;
+$dark-gray: #171717;
+$dark-blue: #1B1D26;
 $dark-green: #223330;
 $mid-green: #778C7A;
 $light-beige: #F1F2D8;
@@ -46,6 +47,34 @@ div.section {
     }
     &#sec1 {
         background-color: $dark-gray;
+        &::before, &::after {
+          position: absolute;
+          z-index: 10;
+          top: 0;
+
+          display: block;
+
+          width: 50%;
+          height: 100%;
+
+          content: '';
+
+          background-color: $dark-blue;
+        }
+        &::before {
+          left: 0;
+
+          animation: fusuma_l 0.5s ease-in-out 0.2s 1 normal forwards;
+
+          border-right: 10px solid $white;
+        }
+        &::after {
+          right: 0;
+
+          animation: fusuma_r 0.5s ease-in-out 0.2s 1 normal forwards;
+
+          border-left: 10px solid $white;
+        }
     }
     &#sec2 {
         background-image: url('../imgs/skytree.jpg');
@@ -605,4 +634,13 @@ h1#fillInText {
     100% {
         left: calc(100% + 10px);
     }
+}
+
+@keyframes fusuma_l {
+  0% { left: 0; }
+  100% { left: calc(-80%);}
+}
+@keyframes fusuma_r {
+  0% { right: 0; }
+  100% { right: calc(-80%);}
 }
