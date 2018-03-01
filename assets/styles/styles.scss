@@ -71,20 +71,17 @@ div.makuake {
     height: 100%;
 
     content: '';
+    animation: fusuma 0.5s ease-in-out 0.2s 1 normal forwards;
 
     background-color: $dark-blue;
   }
   &::before {
     left: 0;
 
-    animation: fusuma_l 0.5s ease-in-out 0.2s 1 normal forwards;
-
     border-right: 10px solid $white;
   }
   &::after {
     right: 0;
-
-    animation: fusuma_r 0.5s ease-in-out 0.2s 1 normal forwards;
 
     border-left: 10px solid $white;
   }
@@ -639,11 +636,16 @@ h1#fillInText {
     }
 }
 
-@keyframes fusuma_l {
-  0% { left: 0; }
-  100% { left: calc(-80%);}
-}
-@keyframes fusuma_r {
-  0% { right: 0; }
-  100% { right: calc(-80%);}
+@keyframes fusuma {
+  0% {
+    width: 50%;
+  }
+  90% {
+    border-width: 10px;
+  }
+  100% {
+    width: 0;
+
+    border-width: 0;
+  }
 }
