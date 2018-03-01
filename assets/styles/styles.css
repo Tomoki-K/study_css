@@ -27,29 +27,30 @@ div.section {
     font-size: 5em; }
   div.section#sec1 {
     background-color: #171717; }
-    div.section#sec1::before, div.section#sec1::after {
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      display: block;
-      width: 50%;
-      height: 100%;
-      content: '';
-      background-color: #1B1D26; }
-    div.section#sec1::before {
-      left: 0;
-      animation: fusuma_l 0.5s ease-in-out 0.2s 1 normal forwards;
-      border-right: 10px solid #fff; }
-    div.section#sec1::after {
-      right: 0;
-      animation: fusuma_r 0.5s ease-in-out 0.2s 1 normal forwards;
-      border-left: 10px solid #fff; }
   div.section#sec2 {
     background-image: url("../imgs/skytree.jpg"); }
   div.section#sec3 {
     background-color: #223330; }
   div.section .fadein {
     opacity: 0; }
+
+div.makuake::before, div.makuake::after {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  content: '';
+  background-color: #1B1D26; }
+div.makuake::before {
+  left: 0;
+  animation: fusuma_l 0.5s ease-in-out 0.2s 1 normal forwards;
+  border-right: 10px solid #fff; }
+div.makuake::after {
+  right: 0;
+  animation: fusuma_r 0.5s ease-in-out 0.2s 1 normal forwards;
+  border-left: 10px solid #fff; }
 
 div.modal div.modal-wrapper {
   position: fixed;

@@ -47,34 +47,6 @@ div.section {
     }
     &#sec1 {
         background-color: $dark-gray;
-        &::before, &::after {
-          position: absolute;
-          z-index: 10;
-          top: 0;
-
-          display: block;
-
-          width: 50%;
-          height: 100%;
-
-          content: '';
-
-          background-color: $dark-blue;
-        }
-        &::before {
-          left: 0;
-
-          animation: fusuma_l 0.5s ease-in-out 0.2s 1 normal forwards;
-
-          border-right: 10px solid $white;
-        }
-        &::after {
-          right: 0;
-
-          animation: fusuma_r 0.5s ease-in-out 0.2s 1 normal forwards;
-
-          border-left: 10px solid $white;
-        }
     }
     &#sec2 {
         background-image: url('../imgs/skytree.jpg');
@@ -85,6 +57,37 @@ div.section {
     .fadein {
         opacity: 0;
     }
+}
+
+div.makuake {
+  &::before, &::after {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+
+    display: block;
+
+    width: 50%;
+    height: 100%;
+
+    content: '';
+
+    background-color: $dark-blue;
+  }
+  &::before {
+    left: 0;
+
+    animation: fusuma_l 0.5s ease-in-out 0.2s 1 normal forwards;
+
+    border-right: 10px solid $white;
+  }
+  &::after {
+    right: 0;
+
+    animation: fusuma_r 0.5s ease-in-out 0.2s 1 normal forwards;
+
+    border-left: 10px solid $white;
+  }
 }
 
 div.modal {
