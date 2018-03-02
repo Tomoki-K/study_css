@@ -619,6 +619,50 @@ h1#fillInText {
     }
 }
 
+div.circleSpin {
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    animation: spin 2s linear infinite;
+
+    border: 4px solid transparent;
+    border-top: 4px solid $white;
+    border-bottom: 4px solid $white;
+    border-radius: 50%;
+    &::before {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+
+        content: '';
+        animation: spin 3s linear infinite;
+
+        border: 4px solid transparent;
+        border-top: 4px solid $white;
+        border-bottom: 4px solid $white;
+        border-radius: 50%;
+    }
+    &::after {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        bottom: 24px;
+        left: 24px;
+
+        content: '';
+        animation: spin 4s linear infinite;
+
+        border: 4px solid transparent;
+        border-top: 4px solid $white;
+        border-bottom: 4px solid $white;
+        border-radius: 50%;
+    }
+}
+
 @media screen and (min-device-width: 375px) and (max-device-width: 812px) {
     // for mobile
     @import 'mobile';
@@ -648,4 +692,13 @@ h1#fillInText {
 
     border-width: 0;
   }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
