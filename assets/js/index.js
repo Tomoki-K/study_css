@@ -1,3 +1,7 @@
+import Chaffle from 'chaffle';
+
+require('../styles/styles.scss');
+
 $(document).ready(function() {
 
     // scroll section into view
@@ -39,5 +43,14 @@ $(document).ready(function() {
     $("a#slideBtn, div.modal-wrapper, span.closeBtn").click(function() {
         $("div.modal").toggleClass("showMode");
         $("div#page-wrapper").toggleClass("blurMode");
+    });
+
+    // chaffle
+    const elements = document.querySelectorAll('[data-chaffle]');
+    Array.prototype.forEach.call(elements, function (el) {
+        const chaffle = new Chaffle(el, { /* options */ });
+        el.addEventListener('mouseover', function () {
+            chaffle.init();
+        });
     });
 });

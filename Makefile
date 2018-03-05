@@ -1,7 +1,10 @@
 dev:
 	open -a Atom .
+	npm run webpack
 	open index.html
-	sass --watch ./assets/styles/styles.scss:./assets/styles/styles.css
+	npm run webpack -- --watch
+	# sass --watch ./assets/styles/styles.scss:./assets/styles/styles.css
 
 watch:
-	sass --watch ./assets/styles/styles.scss:./assets/styles/styles.css
+	npm run webpack -- --watch
+	# sass --watch ./assets/styles/styles.scss:./assets/styles/styles.css

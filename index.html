@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>css study</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/js/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="./assets/styles/styles.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/chaffle/chaffle.min.js"></script>
+    <script type="text/javascript" src="./dist/index.bundle.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/styles/styles.css"> -->
 </head>
 <body>
 
     <ul id='tabs'>
-        <li><a val=1>Section1</a></li>
-        <li><a val=2>Section2</a></li>
-        <li><a val=3>Section3</a></li>
+        <li><a data-chaffle="en" val=1>Section1</a></li>
+        <li><a data-chaffle="en" val=2>Section2</a></li>
+        <li><a data-chaffle="en" val=3>Section3</a></li>
     </ul>
 
     <div id="hamburger">

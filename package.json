@@ -1,0 +1,33 @@
+{
+  "name": "study_css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-loader": "^7.1.3",
+    "chaffle": "^2.0.0",
+    "css-loader": "^0.28.10",
+    "file-loader": "^1.1.11",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
+    "webpack": "^4.1.0",
+    "webpack-cli": "^2.0.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomoki-K/study_css.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tomoki-K/study_css/issues"
+  },
+  "homepage": "https://github.com/Tomoki-K/study_css#readme"
+}
