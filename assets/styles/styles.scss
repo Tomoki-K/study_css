@@ -528,6 +528,61 @@ a#glareBtn {
     }
 }
 
+a#hexBtn {
+    display: inherit;
+
+    width: 100px;
+    height: 40px;
+
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: $dark-gray;
+    background-color: $white;
+
+    font-size: 24px;
+    line-height: 40px;
+    &::before, &::after {
+        position: relative;
+        top: 0;
+
+        display: block;
+
+        box-sizing: border-box;
+        width: 0px;
+        height: 0px;
+
+        content: '';
+        transition: 0.3s;
+        transform: rotateY(90deg);
+
+        border: 20px solid transparent;
+    }
+    &::before {
+        left: -19px;
+
+        transform-origin: right;
+
+        border-right: 20px solid $white;
+        border-left: none;
+    }
+    &::after {
+        right: -19px;
+
+        transform-origin: left;
+
+        border-right: none;
+        border-left: 20px solid $white;
+    }
+    &:hover {
+        &::before, &::after {
+            transform: rotateY(0deg);
+        }
+    }
+}
+
 a.squareBtn {
     position: relative;
 
